@@ -1,3 +1,4 @@
+
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -6,10 +7,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PostsService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  //funcion para la api
-  getPost(){
-    return this.http.get('https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Arsenal');
+  // Función para obtener los eventos en vivo
+  getLiveScores() {
+    return this.http.get<any>('https://www.thesportsdb.com/xml/v2_livescore_example.json');  // Cambia 'URL_DE_TU_API' por la URL de tu API
   }
 }
