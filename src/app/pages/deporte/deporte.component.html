@@ -1,8 +1,12 @@
 <h3>Deportes</h3>
 
 <ul class="list-117 group">
-  <li *ngFor="let team of data" class="list-group-item">
-    <h5>{{ team.strTeam }}</h5>
-    <p>{{ team.strDescriptionEN }}</p>
-  </li>
+
+  @for(teams of data; track teams.idLiveScore){
+    <li class="list-group-item">
+      <h5>{{ teams.strSport }}</h5>
+      <p>{{ teams.strHomeTeamBadge }}</p>
+    </li>
+  }
 </ul>
+

@@ -10,6 +10,6 @@ export class PostsService {
 
   //funcion para la api
   getPost(){
-    return this.http.get('https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Arsenal');
+    return this.http.get('https://www.thesportsdb.com/xml/v2_livescore_example.json');
   }
 }
