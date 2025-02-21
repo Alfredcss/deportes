@@ -1,1 +1,8 @@
-<p>deporte works!</p>
+<h3>Deportes</h3>
+
+<ul class="list-117 group">
+  <li *ngFor="let team of data" class="list-group-item">
+    <h5>{{ team.strTeam }}</h5>
+    <p>{{ team.strDescriptionEN }}</p>
+  </li>
+</ul>
