@@ -1,11 +1,115 @@
-<h3>Deportes</h3>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultados Deportivos</title>
+  <style>
+  
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
 
-<ul class="list-117 group">
+    h3 {
+      text-align: center;
+      font-size: 30px;
+      color: #4A90E2;
+      margin-bottom: 20px;
+    }
 
-  @for(teams of data; track teams.idLiveScore){
-    <li class="list-group-item">
-      <h5>{{ teams.strSport }}</h5>
-      <p>{{ teams.strHomeTeamBadge }}</p>
-    </li>
-  }
-</ul>
+   
+    .list-117 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+ 
+    .list-group-item {
+      background-color: #fff;
+      border-radius: 10px;
+      width: 300px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+ 
+    .list-group-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+
+    .list-group-item img {
+      width: 50px;
+      height: 50px;
+      margin: 10px 0;
+    }
+
+
+    .team-name {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+      margin: 10px 0;
+    }
+
+    .list-group-item h1 {
+      font-size: 18px;
+      color: #444;
+      margin: 10px 0;
+    }
+
+    .event-date {
+      font-size: 16px;
+      color: #777;
+      margin: 5px 0;
+    }
+
+    .result {
+      font-size: 22px;
+      font-weight: bold;
+      color: #E94E77;
+      margin: 15px 0;
+    }
+ 
+
+    .btn:hover {
+      background-color: #357ABD;
+    }
+  </style>
+</head>
+<body>
+  <h3>Resultados Deportivos</h3>
+  <ul class="list-117 group">
+    @for(teams of data; track teams.idLiveScore){
+      <li class="list-group-item">
+        <h5>{{ teams.strSport }}</h5>
+        <img src="{{ teams.strHomeTeamBadge }}" alt="Logo Equipo Local">
+        <h1 class="team-name">{{ teams.strHomeTeam }}</h1>
+        <h1>{{ teams.strLeague }}</h1>
+        <h1 class="event-date">{{ teams.dateEvent }} - {{ teams.strEventTime }}</h1>
+        <h1 class="team-name">{{ teams.strAwayTeam }}</h1>
+        <img src="{{ teams.strAwayTeamBadge }}" alt="Logo Equipo Visitante">
+        <h2 class="result">{{ teams.intHomeScore }} - {{ teams.intAwayScore }}</h2>
+
+        
+      </li>
+    }
+  </ul>
+</body>
+</html>
