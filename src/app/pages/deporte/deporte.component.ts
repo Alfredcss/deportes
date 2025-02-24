@@ -14,7 +14,7 @@ export class DeporteComponent implements OnInit {
   constructor(private postsService: PostsService) {}
 
   ngOnInit(): void {
-    this.postsService.getLiveScores().subscribe((teams: any['']) => {
+    this.postsService.getPost().subscribe((teams: any['']) => {
       // Asignamos la lista de equipos a la propiedad data
       this.data = teams.livescore;
       console.log(this.data);  // Verifica que los equipos se cargan correctamente
