@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,47 +13,77 @@
             background-color: #f8f9fa;
             font-family: Arial, sans-serif;
         }
+
         .container {
             margin-top: 50px;
         }
+
         .card {
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
+        pre {
+            text-align: left;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
     </style>
 </head>
+
 <body>
-    
+
     <div class="container text-center">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card bg-white">
                     <h2 class="text-primary">Sobre el Proyecto</h2>
-                    <p>Esta API proporciona datos sobre resultados deportivos en tiempo real, incluyendo información sobre partidos, equipos y estadísticas. Fue creada para facilitar la integración de datos deportivos en aplicaciones web y móviles.</p>
-                    
+                    <p>Esta API proporciona datos sobre resultados deportivos, incluyendo información sobre partidos,
+                        equipos y estadísticas. Fue creada para facilitar la integración de datos deportivos en
+                        aplicaciones web y móviles.</p>
+
                     <h3 class="text-secondary">Tecnologías Utilizadas</h3>
                     <ul class="list-group mb-3">
                         <li class="list-group-item"><strong>Frontend:</strong> Angular</li>
                         <li class="list-group-item"><strong>Backend:</strong> Node.js, Express</li>
-                        <li class="list-group-item"><strong>API:</strong> <a href="https://www.thesportsdb.com/xml/v2_livescore_example.json" target="_blank">www.thesportsdb.com</a></li>
+                        <li class="list-group-item"><strong>API:</strong> <a
+                                href="https://www.thesportsdb.com/xml/v2_livescore_example.json"
+                                target="_blank">www.thesportsdb.com</a></li>
                     </ul>
-                    
+
                     <h3 class="text-secondary">Historia del Proyecto</h3>
-                    <p>Este proyecto comenzó como un reto personal para aprender más sobre integración de APIs en Angular. A medida que avanzaba, se incluyeron más funcionalidades, como resultados en vivo de deportes, y la base de datos fue mejorando con el tiempo.</p>
-                    
+                    <p>Este proyecto comenzó como un reto personal para aprender más sobre integración de APIs en
+                        Angular. A medida que avanzaba, se incluyeron más funcionalidades, como resultados en vivo de
+                        deportes.</p>
+
                     <h3 class="text-secondary">Contacto</h3>
                     <p>Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto con nosotros:</p>
-                    
+                    <ul class="list-unstyled">
+                        <li><a href="https://twitter.com/deporteapi" target="_blank">Síguenos en Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card bg-light p-4">
+                    <h3 class="text-primary">¿Cómo funcionan las APIs en Angular?</h3>
+                    <p>En Angular, las APIs se consumen utilizando el servicio <code>HttpClient</code>, que permite
+                        realizar peticiones HTTP a servidores externos.</p>
                 </div>
             </div>
         </div>
     </div>
 
     <footer class="bg-dark text-white text-center py-3 mt-5">
-        <p>&copy; 2025 Ejemplo6. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Deportes. Todos los derechos reservados.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
