@@ -1,0 +1,15 @@
+<h2>Ranking de Ligas con Más Partidos</h2>
+<table *ngIf="leagueRankings.length > 0">
+  <tr>
+    <th>Liga</th>
+    <th>Deporte</th>
+    <th>Partidos</th>
+  </tr>
+  <tr *ngFor="let league of leagueRankings">
+    <td>{{ league.strLeague }}</td>
+    <td>{{ league.strSport }}</td>
+    <td>{{ league.matchCount }}</td>
+  </tr>
+</table>
+
+<p *ngIf="leagueRankings.length === 0">No hay datos disponibles</p>
